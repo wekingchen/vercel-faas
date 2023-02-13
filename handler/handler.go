@@ -17,8 +17,10 @@ func ErrRouter(c *gin.Context) {
 
 func NIP05(c *gin.Context) {
 	name2pubkey := map[string]string{
-		"kirito": "2f7caa968b0ec9bacd55a07cfaf6206aab5a62387c76303c311db949dec8bc57",
-		"shishi": "ff99c98713102b462581f31caf810bd59342a13c308cd0e4fb48695e3fc7fc75",
+		"Gordon": "19ff8c27b0ba49a9d28703a44b439f1f23d9ccd97fbfa84b02a127bbefd13fec",
+       		// 可以在这里添加更多的账号，为你的朋友提供验证
+      		// "<name1>":"pubkey1",
+      		// "<name2>":"pubkey2",
 	}
 	user := c.Query("name")
 	fmt.Println("nip05 verify request", user, name2pubkey[user])
